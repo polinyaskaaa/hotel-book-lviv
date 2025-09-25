@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family:'Garamond';
+  color: #3E2723;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #3E2723; 
+  color: #F5F5F5; 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+h2 {
+    font-family:'Popins';
+    color:#3E2723;
+    font-weight: bold;
+}
+
+p {
+    text-align: justify;
+    font-family:'Popins';
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #F5F5F5; 
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #FFB74D; 
+}
+
+#burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #F5F5F5;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+  background: #F5F5F5; 
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
+}
+
+.card {
+  background: #D7CCC8; 
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  color: #5D4037; 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #c69a6b; /* акцент */
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background .2s ease, transform .1s ease;
+}
+
+.btn-primary:hover {
+  background-color: #a36f4f; /* темніший відтінок */
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+
+footer {
+  background: #3E2723; /* глибокий темний шоколад */
+  color: #F5F5F5;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #5D4037;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #burger {
+    display: block;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
