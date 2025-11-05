@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (user) {
             localStorage.setItem("userRole", user.role); // admin | user
-            localStorage.setItem("currentUserName", user.name);
+            localStorage.setItem("currentUser", JSON.stringify(user));
             status.style.color = "green";
             status.textContent = `Вітаємо, ${user.name}!`;
-            setTimeout(() => { window.location.href = "index.html"; }, 1000);
+            setTimeout(() => { window.location.href = "profile.html"; }, 1000);
         } else {
             status.style.color = "red";
             status.textContent = "Невірний email або пароль!";

@@ -1,7 +1,76 @@
+document.addEventListener("DOMContentLoaded", () => {
+  if (!localStorage.getItem("hotels")) {
+    const defaultHotels = [
+      {
+        name: "InshiApartments on Popovycha",
+        description: "InshiApartments on Popovycha розташований у центрі Львова, поруч із пам’ятниками Володимиру Івасюку. До послуг гостей – безкоштовний Wi-Fi, кондиціонер, духовка й чайник. Помешкання розміщене менш ніж за 1 км від Площі Ринок. Працівники стійки реєстрації володіють різними мовами.",
+        img: "./assets/InshiApartmants.png",
+        link: "./mock-pagee/index.html"
+      },
+      {
+        name: "MONTENEL Apartel",
+        description: "Для зручності гостей помешкання MONTENEL Apartel, розміщеного за 500 м від центру міста Львів, номери з безкоштовним Wi-Fi та кухнею з холодильником, мікрохвильовою піччю та плитою.Певні варіанти розміщення мають терасу та/або балкон з чудовим видом на місто.Поруч із помешканням розміщені такі популярні визначні пам'ятки.",
+        img: "./assets/Montenel.png",
+        link: "./mock-pagee/index.html"
+      },
+      {
+        name: "LOFT7",
+        description: "Помешкання Loft7 вдало розміщено в місті Львів. До розпорядження гостей номери з кондиціонером і безкоштовним Wi-Fi, безкоштовна приватна парковка та обслуговування номерів. У помешканні до розпорядження гостей цілодобова стійка реєстрації і ресторан. У помешканні Loft7 усі номери устатковані шафою. У помешканні Loft7 усі номери мають окрему ванну.",
+        img: "./assets/LOFT7.png",
+        link: "./mock-pagee/index.html"
+      },
+      {
+        name: "Old City Apartments",
+        description: "Гостям пропонують варіанти розміщення з повністю обладнаною кухнею з обіднім столом та телевізором із плоским екраном із супутниковими каналами. Окрему ванну кімнату з душем укомплектовано безкоштовними туалетно-косметичними засобами і феном. Певні варіанти розміщення мають терасу та/або балкон з чудовим видом на місто.",
+        img: "./assets/Old City Apartments.png",
+        link: "./mock-pagee/index.html"
+      },
+      {
+        name: "MyAparts R2",
+        description: "Помешкання MyAparts R2 розташовано у серці міста Львів, поруч із пам'яткою 'Латинський кафедральний собор' та з пам'яткою 'Площа Ринок'. До послуг гостей безкоштовний Wi-Fi, кондиціонер і такі зручності, як плита та чайник. Помешкання розташовано за 2 хв. ходьби від пам'ятки 'Палац вірменських архієпископів' і за кілька кроків від пам'ятки 'Палац Бандінеллі'.",
+        img: "./assets/My Aparts R2.png",
+        link: "./mock-pagee/index.html"
+      },
+      {
+        name: "Jam Apartments Miskevycha",
+        description: "У кожному номері встановлено кондиціонер та телевізор із плоским екраном. До розпорядження гостей також повністю обладнана міні-кухня. Окрему ванну кімнату з біде укомплектовано безкоштовними туалетно-косметичними засобами і феном. Тут також для зручності гостей є холодильник, мікрохвильова піч, плита та чайник.",
+        img: "./assets/Jam Apartments Miskevycha.png",
+        link: "./mock-pagee/index.html"
+      },
+      {
+        name: "BANKHOTEL",
+        description: "Помешкання BANKHOTEL розміщено в центрі міста Львів, за кілька кроків від пам'ятки. До розпорядження гостей фітнес-центр, сад та тераса. До розпорядження гостей помешкання ресторан та бар. Для зручності гостей цілодобова стійка реєстрації, трансфер з/до аеропорту, обслуговування номерів та безкоштовний Wi-Fi на всій території помешкання.",
+        img: "./assets/BANKHOTEL.png",
+        link: "./mock-pagee/index.html"
+      },
+      {
+        name: "Equicor",
+        description: "У помешканні Equicor кожен номер укомплектовано шафою, телевізором із плоским екраном, окремою ванною кімнатою, постільною білизною та рушниками. У помешканні кожен номер устаткований чайником, а певні номери також облаштовані міні-кухнею з мікрохвильовою піччю. У помешканні усі варіанти розміщення оснащено холодильником.",
+        img: "./assets/Equicor.png",
+        link: "./mock-pagee/index.html"
+      }
+    ];
 
-const burger = document.getElementById('burger');
-const navLinks = document.querySelector('.nav-links');
+    localStorage.setItem("hotels", JSON.stringify(defaultHotels));
+  }
 
-burger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+  if (!localStorage.getItem("users")) {
+    const defaultUsers = [
+      {
+        name: "Михайло драган",
+        email: "admin@gmail.com",
+        password: "admin123",
+        role: "admin"
+      },
+      {
+        name: "Малик Поліна",
+        email: "user@gmail.com",
+        password: "user123",
+        role: "user"
+      }
+    ];
+
+    localStorage.setItem("users", JSON.stringify(defaultUsers));
+  }
 });
+
