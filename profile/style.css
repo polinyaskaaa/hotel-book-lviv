@@ -1,0 +1,75 @@
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+}
+.modal-content {
+    background: #fff;
+    padding: 2.5em 2em 2em 2em;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    position: relative;
+    min-width: 340px;
+    max-width: 95vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.close {
+    position: absolute;
+    right: 1em; top: 1em;
+    font-size: 2em;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s;
+}
+.close:hover {
+    color: #d00;
+}
+#edit-profile-form label {
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    display: block;
+}
+#edit-profile-form input {
+    width: 100%;
+    padding: 0.7em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.modal-actions {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+}
+.btn-primary {
+    color: #fff;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn-danger {
+    background: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.btn-danger:hover {
+    background: #b71c1c;
+}

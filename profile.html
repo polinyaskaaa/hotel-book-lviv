@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelbookLviv - Профіль</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./profile/style.css">
+</head>
+<body>
+
+<header id="navbar"></header>
+<script type="module" src="navbar.js"></script>
+
+
+<main class="profile-main">
+    <section class="profile-header">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Аватар користувача" class="profile-avatar">
+        <div class="profile-info" id="profile-view">
+            <h1 id="profile-name"></h1>
+            <p class="user-email" id="profile-email"></p>
+            <p class="user-phone" id="profile-phone"></p>
+        </div>
+    </section>
+
+    <section class="profile-cards">
+        <div class="card">
+            <h2>Історія дій</h2>
+            <ul>
+                <li>Тут буде відображено історію подій</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Майбутні бронювання</h2>
+            <ul>
+                <li>Тут будуть відображені майбуні бронювання</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Налаштування</h2>
+            <p>Хочете змінити пароль або видалити акаунт?</p>
+            <button id="edit-profile-btn" class="btn-primary">Керування акаунтом</button>
+        </div>
+    </section>
+
+    <div id="edit-profile-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Редагувати профіль</h2>
+            <form id="edit-profile-form">
+                <label for="edit-name">Ім'я користувача</label>
+                <input type="text" id="edit-name" placeholder="Ім'я" required>
+                <label for="edit-phone">Телефон</label>
+                <input type="tel" id="edit-phone" placeholder="+380..." required pattern="^\+380\d{9}$">
+                <div class="modal-actions">
+                    <button type="submit" class="btn-primary">Зберегти</button>
+                    <button type="button" id="delete-account-btn" class="btn-danger">Видалити акаунт</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 HotelBookLviv. Дані клієнтів захищені.</p>
+    <p>Email: info@hotelbook.com | Тел: +380 96 717 2002 | Instagram: @lviv02_bookhot</p>
+</footer>
+
+<script type="module" src="./profile/script.js"></script>
+
+</body>
+</html>

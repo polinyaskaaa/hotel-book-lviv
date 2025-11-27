@@ -1,0 +1,31 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Popins', sans-serif;
+    font-weight: bold;
+    background-color: #D7CCC8; /* світлий фон */
+    color: #3E2723; /* текст */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.1s;
+}
+
+.tabs button:hover {
+    background-color: #c69a6b;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.tabs button.active {
+    background-color: #3E2723;
+    color: #F5F5F5;
+}
